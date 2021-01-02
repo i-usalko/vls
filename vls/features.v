@@ -146,3 +146,7 @@ fn (ls Vls) generate_symbols(file ast.File, uri lsp.DocumentUri) []lsp.SymbolInf
 	}
 	return symbols
 }
+
+fn (ls Vls) completion_item_resolve(id int, params string) {
+	// TODO: implement completion resolving @see https://code.visualstudio.com/api/language-extensions/language-server-extension-guide
+}

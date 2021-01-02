@@ -74,6 +74,7 @@ pub fn (mut ls Vls) dispatch(payload string) {
 			'textDocument/formatting' { ls.formatting(request.id, request.params) }
 			'textDocument/documentSymbol' { ls.document_symbol(request.id, request.params) }
 			'workspace/symbol' { ls.workspace_symbol(request.id, request.params) }
+			'completionItem/resolve' { ls.completion_item_resolve(request.id, request.params) }
 			else {}
 		}
 	} else {
